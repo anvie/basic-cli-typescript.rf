@@ -1,0 +1,40 @@
+[reframe]
+name = "basic-cli"
+author = "anvie"
+min_version = "0.3.4"
+
+[project]
+name = "BasicCLI"
+version = "0.1.0"
+ignore_dirs = [
+    "target", "build"
+]
+
+finish_text = """Usage:
+
+    $ cd $name_kebab_case$
+
+Install prerequisites:
+
+    $ yarn install
+
+Build:
+
+    $ yarn build
+
+Run:
+
+    $ yarn main --help
+"""
+
+[[param]]
+description = { ask = "Description ?", default = "My cool CLI app" }
+
+[[param]]
+author_name = { ask = "Author name?", default="Author" }
+
+[[param]]
+author_email = { ask = "Author email?", default="author@example.com" }
+
+[[param]]
+license = { ask = "License", default="MIT" }
