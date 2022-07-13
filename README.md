@@ -1,6 +1,6 @@
 # Basic CLI program (Typescript)
 
-This is [Reframe](https://github.com/ansvia/reframe) source to build basic cli ypescript program.
+This is [Reframe](https://github.com/ansvia/reframe) source to build basic cli typescript program.
 
 ## Usage
 
