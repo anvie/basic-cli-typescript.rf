@@ -38,3 +38,10 @@ author_email = { ask = "Author email?", default="author@example.com" }
 
 [[param]]
 license = { ask = "License", default="MIT" }
+
+[[param]]
+with_vscode_settings = { ask = "Add VSCode settings?", default="true" }
+
+[[present]]
+path = ".vscode"
+if = "with_vscode_settings"
