@@ -8,8 +8,7 @@
   "license": "$param.license$",
   "scripts": {
     "build": "npx tsc",
-    "main": "node build/main.js",
-    "greet": "ts-node src/main.ts"
+    "main": "ts-node src/main.ts"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",
