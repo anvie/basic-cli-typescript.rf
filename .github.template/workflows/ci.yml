@@ -4,23 +4,20 @@ on:
     branches:
       - main
       - master
+    paths-ignore:
+      - "README.md"
   # schedule:
   #   - cron: '0 0 * * *' # Everyday at 12am
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
 
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v2.5.1
-        with:
-          node-version: $\{{ matrix.node }}
-          check-latest: true
-
-      - run: yarn install
-      - run: yarn build
-
+      - run: bun install
+      - run: bun run build
+      
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
